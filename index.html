@@ -1,4 +1,50 @@
-<audio controls autoplay>
-    <source src="http://us5new.listen2myradio.com:2199/start/yrblthtb/" type="audio/mp3">
-    Your browser does not support the audio element.
-</audio>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Web Player</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #222;
+            color: white;
+            padding: 50px;
+        }
+        .player-container {
+            background: #333;
+            padding: 20px;
+            border-radius: 10px;
+            display: inline-block;
+        }
+        button {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .play { background-color: #28a745; color: white; }
+        .pause { background-color: #dc3545; color: white; }
+    </style>
+</head>
+<body>
+    <h1>Live Radio Player</h1>
+    <div class="player-container">
+        <audio id="radioPlayer" src="http://us5new.listen2myradio.com:2199/start/xuqfxzjp" preload="none"></audio>
+        <button class="play" onclick="playRadio()">Play</button>
+        <button class="pause" onclick="pauseRadio()">Pause</button>
+    </div>
+
+    <script>
+        function playRadio() {
+            document.getElementById('radioPlayer').play();
+        }
+        function pauseRadio() {
+            document.getElementById('radioPlayer').pause();
+        }
+    </script>
+</body>
+</html>
